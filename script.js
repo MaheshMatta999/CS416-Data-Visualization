@@ -20,10 +20,10 @@ d3.csv("./netflix_titles.csv").then(data => {
     });
     const genreData = Object.keys(genreCounts).map(key => ({ genre: key, count: genreCounts[key] })).slice(0, 10);
 
-    // Initial chart
+  
     showBarChart(genreData);
 
-    // Store data globally for reuse
+
     window.genreData = genreData;
     window.rawData = data;
 });
@@ -84,7 +84,7 @@ function showScatterPlot(data) {
     const durationData = data.map(d => {
         const duration = parseInt(d.duration.split(' ')[0]);
         return { year: +d.release_year, duration: duration, type: d.type };
-    });
+    }).filter(d => !isNaN(d.duration) && d.duration !== "");
 
     x.domain(d3.extent(durationData, d => d.year));
     y.domain(d3.extent(durationData, d => d.duration));

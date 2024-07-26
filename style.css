@@ -80,7 +80,7 @@ h2 {
 }
 
 .legend-item rect {
-    width: 25px; /* Increased width */
+    width: 25px; 
     height: 18px;
 }
 
