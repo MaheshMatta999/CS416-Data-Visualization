@@ -1,0 +1,90 @@
+body {
+    background-color: #141414;
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #e50914;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #e50914;
+    margin-bottom: 20px;
+}
+
+#chart {
+    width: 100%;
+    height: 600px;
+    margin: 40px 0;
+}
+
+#buttons {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f40612;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: 1px solid #e50914;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.legend-item {
+    font-size: 0.9em;
+    fill: white;
+}
+
+.legend-item rect {
+    width: 25px; /* Increased width */
+    height: 18px;
+}
+
+.legend-item text {
+    fill: white;
+    margin-left: 5px;
+}
